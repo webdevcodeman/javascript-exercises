@@ -7,19 +7,16 @@ const subtract = function(num1,num2) {
 };
 
 const sum = function(arr) {
-  let arrSum=0;
-	for(let i=0;i<arr.length;i++){
-    arrSum+=arr[i];
-  }
-  return arrSum;
+  // let arrSum=0;
+	// for(let i=0;i<arr.length;i++){
+  //   arrSum+=arr[i];
+  // }
+  // return arrSum;
+  return arr.reduce((total,item)=>total+item,0);
 };
 
 const multiply = function(arr) {
-  let arrProduct=1;
-  for(let i=0;i<arr.length;i++){
-    arrProduct*=arr[i];
-  }
-  return arrProduct;
+  return arr.length?arr.reduce((accumulator,item)=>accumulator*item):0;
 };
 
 const power = function(base,pow) {
